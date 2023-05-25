@@ -1,0 +1,711 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Sergio Madaleno Figueroa"/>
+<meta name="owner" content="Sergio Madaleno Figueroa"/>
+<meta name="description" content="Academic project from the cuphead videogame"/>
+<meta name="keywords" content="Cuphead academic project"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="icon" type="image/jpg" href="img/icon.ico"/>
+<link rel="stylesheet" href="css/style.css">
+<title> Cuphead - Práctica</title>
+
+<style>
+@font-face{font-family: fuente;
+    src: url(fuentes/AlegreyaSansSC-Bold.ttf)
+
+}
+
+/*-------------------------------------------------------------------------------------*/
+/*Body*/
+.bodyFlex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+}
+
+.middle {
+  border: 1px solid black;
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+
+.contentM1{
+  display: flex;
+  float: left;
+  width: 50%;
+} 
+
+.contentM2{
+  display: flex;
+  float: right;
+  width: 50%;
+} 
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  border: 15px solid #EABB0D;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+/*-------------------*/
+
+.cont{
+    display: flex;
+    width:100%;
+    color:#292036 ;
+    padding-left: 7%;
+    padding-top: 6%;
+}
+
+.cont2 {
+  
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+
+.contentF2{
+  
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 3%;
+  display: flex;
+  width:100%;
+  color:#292036 ;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.contentS2{
+    display: flex;
+    padding-right: 7%;
+    padding-left: 7%;
+    padding-top: 3%;
+    float: right;
+    width:100%;
+    color:#292036 ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.contentT2{
+    display: flex;
+    width:100%;
+    padding-top:3%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.contentT3{
+    display: flex;
+    width:100%;
+    padding-top:3%;
+    padding-right:7%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.pencilImg{
+      width: 1000px;
+      
+  }
+  
+.imganimation{
+  border: 5px solid #555;
+}
+
+.column {
+  float: left;
+  width: 40%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*-------------------------------------------------------------------------------------*/
+/*Responsive*/
+
+/*Tablet*/
+@media only screen and (min-width:481px) and (max-width:950px){
+
+    .header .nav-links {
+        display: none;
+    }
+
+  .content1, .content2 {
+    width: 65%;
+  }
+
+  .content3 {
+    width: 100%;
+    order: 4;
+  }
+
+    footer .container {
+        flex-wrap: wrap;
+    }
+
+    .about {
+        order: 1;
+        flex-basis: calc(100% - 400px);
+        
+    }
+
+    .contact {
+        order: 2;
+    }
+
+
+    .container {
+    flex-direction: column;
+    }
+
+    .tabcontent .contentF{
+        width: 100%;
+    }
+
+    .contentT{
+        width: 100%;
+    }
+
+    .tabcontent .contentS{
+        padding-top: 0px;
+        padding-left: 10px;
+        width: 100%;
+        float: none;
+    }
+
+
+    .middle, .bottom, .containerBox2, .content0 .box1, .content1 {
+    width: 100%;
+    float: none;
+    order: initial;
+    }
+
+    .middle {
+    order: 3;
+  }
+  .containerBox2 {
+    order: 2;
+  }
+
+  .bottom2 {
+    float: left;
+    width: 100%;
+  }
+
+  .contentF2{
+    width: 100%;
+    height: auto;
+  }
+
+  .contentS2{
+    width: 100%;
+    height: auto;
+  }
+
+  .pencilImg{
+      width: 100%;
+      height: auto;
+  }
+
+  .imgMov2{
+    display: none;
+  }
+
+  .cont2 {
+    flex-direction: column;
+  }
+
+  .contentF2{
+    padding-top: 7%;
+
+  }
+
+  .contentS2{
+    padding-top: 7%;
+  }
+  
+  .contentT3{
+    padding-left:7%;
+  }
+  
+}
+
+/*Mobile*/
+@media only screen and (max-width:480px){
+
+    .header .logo img{
+        display: none;
+    }
+
+    .header .nav-links {
+        display: none;
+    }
+
+
+    .containerBox2 {
+        height: auto;
+    }
+
+    footer .container {
+        flex-wrap: wrap;
+    }
+
+    .about {
+        order: 1;
+        flex-basis: calc(100% - 400px);
+        
+    }
+
+    .contact {
+        order: 2;
+    }
+
+   .container {
+    flex-direction: column;
+    }
+
+    .tabcontent .contentF{
+        width: 100%;
+    }
+
+    .contentT{
+        width: 100%;
+    }
+
+    .tabcontent .contentS{
+        padding-top: 0px;
+        padding-left: 10px;
+        width: 100%;
+        float: none;
+    }      
+
+    .video-container img {
+        width: 70%;
+        max-width: 100px;
+        margin-top: 10px;
+    }
+
+    .contentF2{
+    width: 100%;
+  }
+
+  .contentS2{
+    width: 100%;
+  }
+
+  .pencilImg{
+      width: 100%;
+  }
+
+  .imgMov{
+      display: none;
+  }
+
+  .cont2 {
+    flex-direction: column;
+  }
+
+  .contentF2{
+    padding-top: 7%;
+
+  }
+
+  .contentS2{
+    padding-top: 7%;
+  }
+  
+  .contentT3{
+    padding-left:7%;
+  }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 951px){
+    .sidebar {
+        display: none;
+    }
+
+    .openbtn {
+        display: none;
+    }
+
+    .pencilImg{
+      width: 50%;
+      height: auto;
+    }
+
+  .imgMov2{
+      display: none;
+  }
+
+}
+
+
+
+/*<div class="video">
+    <video width="500px%" height="500px" preload="true" muted="" loop="" playsinline="" poster="" data-testid="abilities:video" autoplay><source src="video/trailer1.mp4" type="video/mp4"></video>
+</div> */
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="containerBox">
+        <header class="header">
+          <div class="logo">
+            <a href="index.html"> <img src="img/cupheadDD.png" alt="Logo de cuphead" width="100%" height="100%"> </a>
+          </div>
+    
+          <nav>
+            <ul class="nav-links">
+              <li> <a href="characters.html"> CHARACTERS</a> </li>
+              <li> <a href="gameplay.html"> GAMEPLAY </a> </li>
+              <li> <a href="artStyle.html"> ART STYLE</a> </li>
+            </ul>
+          </nav>
+    
+          <img class="imgMov" src="img/cuphead3.png" alt="cuphead" height="70px" width="auto">
+
+          <div class="imgMov2">
+            <a href="index.html"> <img class="img" src="img/cuphead3.png" alt="cuphead" height="70px" width="auto"> </a>
+          </div>
+
+          <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+            <a href="characters.html">CHARACTERS</a>
+            <a href="gameplay.html">GAMEPLAY</a>
+            <a href="artStyle.html">ART STYLE</a>
+            <a href="#bottom"> CONTACT ME</a>
+            <a href="#bottom2"> PRIVACY POLICY</a>
+          </div>
+    
+          <div id="main">
+            <button class="openbtn" onclick="openNav()"> 
+                <div class="my-div"></div>
+                <div class="my-div"></div>
+                <div class="my-div"></div> 
+            </button>  
+          </div>
+          
+          <script>
+            function openNav(){
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+          
+            function closeNav(){
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+            }
+          </script>
+    
+        </header>
+      </div>
+    </div>
+  </div>
+
+
+  <br><br><br><br><br><br>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="img/background.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="img/background2.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img/background3.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+
+
+<div class="cont">
+  <h2> Exploring cuphead style</h2> 
+</div>
+
+  <div class="cont2">
+  <div class="contentF2">
+    <div>
+      the most striking thing about the game is how it looks. It’s a game that tries to capture the surreality inherent in cartoons from the ‘30s, like Betty Boop or Steamboat Willie. Enemies in the game include a towering cigar with a sinister grin, and a giant carrot with psychic powers. There are also plenty of sight gags, like a fish going fishing, or a coin who doesn’t trust banks. And, of course, the main character in Cuphead is, well, a guy a with a cup for a head.
+      
+    </div>
+</div>
+<div class="contentT2">
+  <img src="img/pencil1.png" alt="pencilimg3" width="100%" height="100%" class="pencilImg" >
+</div>
+</div>
+  
+
+  <div class="cont2">
+    <div class="contentF2">
+      <div>
+       Capturing that style — and doing it in a way that both looked and felt authentic — required a lot of work. It meant utilizing most of the same techniques that gave early Disney and Fleischer Studios cartoons their distinct look. The backgrounds in the game consist of watercolor paintings, while every frame of animation was hand-drawn on paper, before being inked and ultimately inserted into the game. The only part of the process that was digital was the coloring. “When we did our tests at the beginning, we hand-painted each cell and then we colored it digitally, and we did a comparison,” explains Moldenhauer. “There really was no difference. So that’s why we took the easy path.”
+       
+        Development on Cuphead started in 2010, and it was first revealed back in 2014. At that point it was a considerably smaller game. In order to be realistic about what they could actually create, the team at Studio MDHR scaled back their vision to an experience that would consist entirely of a series of eight Mega Man-style boss battles. At the time, the studio consisted of just three people, making it a challenge to create anything larger than that, especially considering the time-consuming nature of the art style.
+        
+      </div>
+  </div>
+  
+</div>
+  
+  
+  <div class="cont">
+    <h2> Animations</h2> 
+  </div>
+  
+  <div class="cont2">
+  <div class="contentF2">
+    <div>
+      
+      <div class="row">
+  <div class="column">
+    <img src="img/animation.webp" alt="animationimg" width="100%" height="auto" class="imganimation">
+  </div>
+  <div class="column">
+    <img src="img/animation2.webp" alt="animationimg2" width="100%" height="auto" class="imganimation">
+  </div>
+  <div class="column">
+    <img src="img/animation3.webp" alt="animationimg3" width="100%" height="auto" class="imganimation">
+  </div>
+</div>
+    
+    </div>
+</div>
+<div class="contentT3">
+  <div>
+    Cuphead is one of the most visually striking games ever made with Unity. All of the game’s animated artwork has been drawn, penciled and inked on paper, and then colored in Photoshop.
+
+  “By using the same animating tools and techniques that they did in the 1930s – hand-drawing and inking each frame, animating on the ones, and creating hand-painted watercolor backgrounds – we believe we can closely replicate the 1930s style better than using modern and digital means to create the art,” says Chad Moldenhauer.
+  
+    <br><br><br>
+    
+    StudioMDHR then sets the animation at 24 frames-per-second – just as it was in the 1930s – while the game runs at a sparkling 60 frames-per-second to ensure truly responsive gameplay.
+
+As well as helping StudioMDHR process the massive amount of their exquisite art, Unity’s out-of-the-box features such as the Sprite Renderer, Sprite Packer, 2D Physics, and particle effects ensured that Cuphead’s stunning results were a sure bet.
+  </div>
+</div>
+</div>
+</div>
+  
+    <a name="bottom2" id="bottom2"></a>
+    <br><br><br><br>
+    <script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+
+<footer>
+  <section class="container">
+      <div class="about"> 
+          <h2> Privacy Policy</h2>
+          <br>
+          <div style="height:300px;width:100%;border:1px solid #000000;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+              <p>This Privacy Policy establishes the terms in which Cuphead uses and protects the information that is provided by its users when using its website. This company is committed to the security of its users' data. When we ask you to fill in the personal information fields with which you can be identified, we do so ensuring that it will only be used in accordance with the terms of this document. However, this Privacy Policy may change over time or be updated, so we recommend and emphasize that you continually review this page to ensure that you agree with such changes.<br></p><p><strong><br>Information that is collected </strong></p><p>Our website may collect personal information such as: Name,&nbsp; contact information such as&nbsp; your email address and demographic information. Likewise, when necessary, specific information may be required to process an order or make a delivery or billing.</p><p><strong><br>Use of the information collected</strong></p><p>Our website uses the information in order to provide the best possible service, particularly to maintain a user registry, of orders if applicable, and to improve our products and services. &nbsp;Emails may be sent periodically through our site with special offers, new products and other advertising information that we consider relevant to you or that may provide you with some benefit, these emails will be sent to the address that you provide and may be canceled at any time.</p><p>Cuphead is highly committed to fulfilling the commitment to keep your information secure. We use the most advanced systems and constantly update them to ensure that there is no unauthorized access.</p><p><strong><br>Cookies</strong></p><p>A cookie refers to a file that is sent with the purpose of requesting permission to be stored on your computer, by accepting said file it is created and the cookie is then used to have information regarding web traffic, and also facilitates future visits to a recurring website. Another function that cookies have is that with them the web can recognize you individually and therefore provide you with the best personalized service on their website.</p><p>Our website does not use cookies, cookies are used to be able to identify the pages that are visited and their frequency. This information is used for statistical analysis only and then the information is permanently deleted. You can delete cookies at any time from your computer. However, cookies help to provide a better service to websites, you do not give access to information from your computer or from you, unless you want it and provide it directly <a href="" target="_blank "></a>. You can accept or deny the use of cookies, however most browsers automatically accept cookies as it serves to have a better web service. You can also change the settings on your computer to decline cookies. If they are declined, you may not be able to use some of our services.</p><p><strong><br>Links to Third Parties</strong></p><p>This website may contain links to other sites that may be of interest to you. Once you click on these links and leave our page, we no longer have control over the site to which you are redirected and therefore we are not responsible for terms or privacy</a> or the protection of your data on those other third party sites. These sites are subject to their own privacy policies, so it is recommended that you consult them to confirm that you agree with them.</p><p><strong><br>Control of your personal information</strong></p ><p>At any time you can restrict the collection or use of personal information that is provided to our website.&nbsp; Every time you are asked to fill in a form, such as user registration, you can check or uncheck the option to receive information by email. &nbsp;In case you have checked the option to receive our newsletter or advertising you can cancel it at any time.</p><p>This company will not sell, assign or distribute the personal information that is collected without your consent, except that is required by a judge with a court order.</p><p>Cuphead reserves the right to change the terms of this Privacy Policy at any time.</p><p>This privacy policy has been generated at politicadeprivacidadtemplate.com</a>.<br></p>
+          </div>
+          <img src="img/cuphead_jump.gif" alt="jumpcuphead" width="15%" height="25%" class="JumpCuphead">
+      </div>
+
+      <div class="contact"> 
+          <div class="containerC">
+              <div class="contentC">
+                <div class="image-box">
+                </div>
+              <form action="#">
+                <div class="topic"><h2>Contact me</h2></div>
+                <div class="input-box">
+                  <input type="text" required>
+                  <label>Enter your name</label>
+                </div>
+                <div class="input-box">
+                  <input type="text" required>
+                  <label>Enter your email</label>
+                </div>
+                <div class="message-box">
+                  <label for="message">Enter your message</label>
+                  <textarea id="message" name="message" required></textarea>
+                  <label>Enter message</label>
+                </div>
+                <div class="input-box">
+                  <input type="submit" value="Send Message">
+                </div>
+              </form>
+            </div>
+            </div>
+      </div>
+  </section>
+
+   <section> <div class="copyright"> 
+          <br>
+            <div><a href="cv.html", target="_blank">Made by: Sergio Madaleno</a></div> <div> &nbsp; &nbsp; ©Academic Project from the Cuphead videogame</div>
+          <br>
+                
+        </div>
+        </section>
+</footer>
+
+<a name="bottom" id="bottom"></a>
+
+</body>
+</html>

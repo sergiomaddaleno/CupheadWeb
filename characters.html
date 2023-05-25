@@ -1,0 +1,502 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Sergio Madaleno Figueroa"/>
+<meta name="owner" content="Sergio Madaleno Figueroa"/>
+<meta name="description" content="Academic project from the cuphead videogame"/>
+<meta name="keywords" content="Cuphead academic project"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="icon" type="image/jpg" href="img/icon.ico"/>
+<link rel="stylesheet" href="css/style.css">
+<title> Cuphead - Práctica</title>
+
+<style>
+@font-face{font-family: fuente;
+    src: url(fuentes/AlegreyaSansSC-Bold.ttf)
+
+}
+
+/*-------------------------------------------------------------------------------------*/
+/*Body*/
+
+.containerB {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.card {
+    position: relative;
+    width: 270px;
+    margin: 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px 1fr auto;
+}
+
+.card-body,
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.card-image img {
+    max-width: 95%;
+    max-height: 95%;
+    transition: max-width 0.4s, max-height 0.4s;
+}
+
+.card:hover .card-image img {
+    max-width: 120%;
+    max-height: 120%;
+}
+
+
+.card {
+    box-shadow: 0 15px 30px -10px #000;
+}
+
+.card:hover {
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-body {
+    background: #EABB0D;
+    padding: 20px 28px;
+}
+
+
+.card-body h2 {
+    font-size: 1.8em;
+    margin: 4px auto 12px;
+}
+
+.card-body p {
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;
+    line-height: 20px;
+    text-align: center;
+}
+
+/*-------------------------------------------------------------------------------------*/
+/*Responsive*/
+
+/*Tablet*/
+@media only screen and (min-width:481px) and (max-width:950px){
+
+    .header .nav-links {
+        display: none;
+    }
+
+  .content1, .content2 {
+    width: 65%;
+  }
+
+  .content3 {
+    width: 100%;
+    order: 4;
+  }
+
+    footer .container {
+        flex-wrap: wrap;
+    }
+
+    .about {
+        order: 1;
+        flex-basis: calc(100% - 400px);
+        
+    }
+
+    .contact {
+        order: 2;
+    }
+
+    .fullimg2-hide{
+       display: none;
+   }
+
+    .container {
+    flex-direction: column;
+    }
+
+    .tabcontent .contentF{
+        width: 100%;
+    }
+
+    .contentT{
+        width: 100%;
+    }
+
+    .tabcontent .contentS{
+        padding-top: 0px;
+        padding-left: 10px;
+        width: 100%;
+        float: none;
+    }
+
+    .imgMov2{
+        display: none;
+    }
+
+}
+
+/*Mobile*/
+@media only screen and (max-width:480px){
+
+    .header .logo img{
+        display: none;
+    }
+
+    .header .nav-links {
+        display: none;
+    }
+
+
+    .containerBox2 {
+        height: auto;
+    }
+
+    footer .container {
+        flex-wrap: wrap;
+    }
+
+    .about {
+        order: 1;
+        flex-basis: calc(100% - 400px);
+        
+    }
+
+    .contact {
+        order: 2;
+    }
+
+    .fullimg1-hide{
+       display: none;
+   }
+
+   .container {
+    flex-direction: column;
+    }
+
+    .tabcontent .contentF{
+        width: 100%;
+    }
+
+    .contentT{
+        width: 100%;
+    }
+
+    .tabcontent .contentS{
+        padding-top: 0px;
+        padding-left: 10px;
+        width: 100%;
+        float: none;
+    }      
+
+    .video-container img {
+        width: 70%;
+        max-width: 100px;
+        margin-top: 10px;
+    }
+
+    .imgMov{
+      display: none;
+    }
+
+ 
+}
+
+/*Desktop*/
+@media only screen and (min-width: 951px){
+    .sidebar {
+        display: none;
+    }
+
+    .openbtn {
+        display: none;
+    }
+
+    .fullimg2-hide{
+       display: none;
+   }
+
+   .imgMov2{
+      display: none;
+    }
+
+}
+
+
+
+/*<div class="video">
+    <video width="500px%" height="500px" preload="true" muted="" loop="" playsinline="" poster="" data-testid="abilities:video" autoplay><source src="video/trailer1.mp4" type="video/mp4"></video>
+</div> */
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="containerBox">
+        <header class="header">
+          <div class="logo">
+            <a href="index.html"> <img src="img/cupheadDD.png" alt="Logo de cuphead" width="100%" height="100%"> </a>
+          </div>
+    
+          <nav>
+            <ul class="nav-links">
+              <li> <a href="characters.html"> CHARACTERS</a> </li>
+              <li> <a href="gameplay.html"> GAMEPLAY </a> </li>
+              <li> <a href="artStyle.html"> ART STYLE</a> </li>
+            </ul>
+          </nav>
+    
+          <img class="imgMov" src="img/cuphead3.png" alt="cuphead" height="70px" width="auto">
+
+          <div class="imgMov2">
+            <a href="index.html"> <img class="img" src="img/cuphead3.png" alt="cuphead" height="70px" width="auto"> </a>
+          </div>
+
+          <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+            <a href="characters.html">CHARACTERS</a>
+            <a href="gameplay.html">GAMEPLAY</a>
+            <a href="artStyle.html">ART STYLE</a>
+            <a href="#bottom"> CONTACT ME</a>
+            <a href="#bottom2"> PRIVACY POLICY</a>
+          </div>
+    
+          <div id="main">
+            <button class="openbtn" onclick="openNav()"> 
+                <div class="my-div"></div>
+                <div class="my-div"></div>
+                <div class="my-div"></div> 
+            </button>  
+          </div>
+          
+          <script>
+            function openNav(){
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+          
+            function closeNav(){
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+            }
+          </script>
+    
+        </header>
+      </div>
+    
+    <br>
+
+    <div class="containerB">
+        <div class="card">
+            <div class="card-image">
+                <img src="img/cupheadP.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>Cuphead</h2>
+                <p>Cuphead is the titular protagonist of Cuphead. Cuphead is Mugman's irresponsible older twin brother and, like the rest of his family, lives on Inkwell Isle.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/mugmanP.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>Mugman</h2>
+                <p>Mugman is the deuteragonist of Cuphead. He is Cuphead's sensible younger twin brother and, like the rest of his family, lives on Inkwell Isle.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/mschalice.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>Ms.Chalice</h2>
+                <p>Ms. Chalice is the tritagonist of Cuphead. She was first revealed in the announcement trailer for the DLC, Cuphead: The Delicious Last Course.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/cupheaddevil.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>The Devil</h2>
+                <p>The Devil is the main antagonist and the final boss of Cuphead: 'Don't Deal With the Devil'. As ruler of the underground isle of Inkwell Hell, he resides within the colossal, castle-like casino that takes up most of the isle's landscape.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/kingdiceP.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>King Dice</h2>
+                <p>King Dice is the right-hand man of the Devil and the secondary antagonist of Cuphead, making his very first appearance in the game in the opening cutscene.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/elderkettle.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>Elder kettle</h2>
+                <p>Elder Kettle is a supporting character in Cuphead who acts as the caretaker of Cuphead and Mugman. </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/cagneyP.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>Cagney Carnation</h2>
+                <p>Cagney Carnation is the boss of the level titled Floral Fury. He is one of the bosses that can be encountered in Inkwell Isle One.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/frogs.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>Ribby and Croaks</h2>
+                <p>Ribby and Croaks are a boss duo in Cuphead. They are fought and encountered in the level Clip Joint Calamity on Inkwell Isle One.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/goopyP.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>Goopy le Grande</h2>
+                <p>Goopy Le Grande is one of the first bosses in Cuphead. He appears in Ruse Of An Ooze from Inkwell Isle One.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/calaP.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>Cala Maria</h2>
+                <p>Cala Maria is one of the bosses on Inkwell Isle Three on the boss level, "High Seas Hi-Jinx!" Her stage is a side-scrolling shooter level.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/baronessP.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>Baroness Von Bon</h2>
+                <p>Baroness Von Bon Bon is a character of Cuphead residing in Inkwell Isle Two, and the main boss of the Sugarland Shimmy level with her candy-based, anthropomorphic castle fortress Whippet Creampup.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="img/rootP.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <h2>The Root Pack</h2>
+                <p>The Root Pack is a group of four root vegetables residing on Inkwell Isle One, and the boss of the Botanic Panic! level.</p>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom2" id="bottom2"></a>
+    <br><br> <br><br> <br><br> <br><br>
+
+
+    <footer>
+        <section class="container">
+            <div class="about"> 
+                <h2> Privacy Policy</h2>
+                <br>
+                <div style="height:300px;width:100%;border:1px solid #000000;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+                    <p>This Privacy Policy establishes the terms in which Cuphead uses and protects the information that is provided by its users when using its website. This company is committed to the security of its users' data. When we ask you to fill in the personal information fields with which you can be identified, we do so ensuring that it will only be used in accordance with the terms of this document. However, this Privacy Policy may change over time or be updated, so we recommend and emphasize that you continually review this page to ensure that you agree with such changes.<br></p><p><strong><br>Information that is collected </strong></p><p>Our website may collect personal information such as: Name,&nbsp; contact information such as&nbsp; your email address and demographic information. Likewise, when necessary, specific information may be required to process an order or make a delivery or billing.</p><p><strong><br>Use of the information collected</strong></p><p>Our website uses the information in order to provide the best possible service, particularly to maintain a user registry, of orders if applicable, and to improve our products and services. &nbsp;Emails may be sent periodically through our site with special offers, new products and other advertising information that we consider relevant to you or that may provide you with some benefit, these emails will be sent to the address that you provide and may be canceled at any time.</p><p>Cuphead is highly committed to fulfilling the commitment to keep your information secure. We use the most advanced systems and constantly update them to ensure that there is no unauthorized access.</p><p><strong><br>Cookies</strong></p><p>A cookie refers to a file that is sent with the purpose of requesting permission to be stored on your computer, by accepting said file it is created and the cookie is then used to have information regarding web traffic, and also facilitates future visits to a recurring website. Another function that cookies have is that with them the web can recognize you individually and therefore provide you with the best personalized service on their website.</p><p>Our website does not use cookies, cookies are used to be able to identify the pages that are visited and their frequency. This information is used for statistical analysis only and then the information is permanently deleted. You can delete cookies at any time from your computer. However, cookies help to provide a better service to websites, you do not give access to information from your computer or from you, unless you want it and provide it directly <a href="" target="_blank "></a>. You can accept or deny the use of cookies, however most browsers automatically accept cookies as it serves to have a better web service. You can also change the settings on your computer to decline cookies. If they are declined, you may not be able to use some of our services.</p><p><strong><br>Links to Third Parties</strong></p><p>This website may contain links to other sites that may be of interest to you. Once you click on these links and leave our page, we no longer have control over the site to which you are redirected and therefore we are not responsible for terms or privacy</a> or the protection of your data on those other third party sites. These sites are subject to their own privacy policies, so it is recommended that you consult them to confirm that you agree with them.</p><p><strong><br>Control of your personal information</strong></p ><p>At any time you can restrict the collection or use of personal information that is provided to our website.&nbsp; Every time you are asked to fill in a form, such as user registration, you can check or uncheck the option to receive information by email. &nbsp;In case you have checked the option to receive our newsletter or advertising you can cancel it at any time.</p><p>This company will not sell, assign or distribute the personal information that is collected without your consent, except that is required by a judge with a court order.</p><p>Cuphead reserves the right to change the terms of this Privacy Policy at any time.</p><p>This privacy policy has been generated at politicadeprivacidadtemplate.com</a>.<br></p>
+                </div>
+                <img src="img/cuphead_jump.gif" alt="jumpcuphead" width="15%" height="25%" class="JumpCuphead">
+            </div>
+
+            <div class="contact"> 
+                <div class="containerC">
+                    <div class="contentC">
+                      <div class="image-box">
+                      </div>
+                    <form action="#">
+                      <div class="topic"><h2>Contact me</h2></div>
+                      <div class="input-box">
+                        <input type="text" required>
+                        <label>Enter your name</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="text" required>
+                        <label>Enter your email</label>
+                      </div>
+                      <div class="message-box">
+                        <label for="message">Enter your message</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <label>Enter message</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="submit" value="Send Message">
+                      </div>
+                    </form>
+                  </div>
+                  </div>
+            </div>
+        </section>
+
+        <section> <div class="copyright"> 
+          <br>
+            <div><a href="cv.html", target="_blank">Made by: Sergio Madaleno</a></div> <div> &nbsp; &nbsp; ©Academic Project from the Cuphead videogame</div>
+          <br>
+                
+        </div>
+        </section>
+    </footer>
+
+    <a name="bottom" id="bottom"></a>
+
+</body>
+</html>
